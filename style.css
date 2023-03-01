@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(233, 223, 255);
+  background-color: rgb(51, 51, 51);
   font-family: "Open Sans", sans-serif;
   display: flex;
   flex-direction: column;
@@ -10,13 +10,16 @@ body {
 }
 
 h1 {
-  color: rgb(83, 49, 156);
+  /* color: rgb(83, 49, 156); */
+  color: rgb(227, 24, 54);
+  margin: 32px 0 64px 0;
 }
 
 .container {
   background-color: white;
   width: 100%;
   max-width: 900px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,7 +35,8 @@ h1 {
   justify-content: space-around;
   text-transform: uppercase;
   font-weight: bold;
-  color: rgb(200, 175, 255);
+  /* color: rgb(200, 175, 255); */
+  color: rgba(227, 24, 54, 0.404);
   margin: 0 0 32px 0;
   padding: 16px;
 }
@@ -42,11 +46,11 @@ h1 {
 }
 
 .tabs p:hover {
-  color: rgb(83, 49, 156);
+  color: rgb(227, 24, 54);
   cursor: pointer;
 }
 .tabs .active {
-  color: rgb(83, 49, 156);
+  color: rgb(227, 24, 54);
   position: relative;
 }
 
@@ -62,7 +66,7 @@ h1 {
   content: "";
   width: 200%;
   height: 4px;
-  background-color: rgb(83, 49, 156);
+  background-color: rgb(227, 24, 54);
   position: absolute;
   bottom: -32px;
   left: -50%;
@@ -80,7 +84,7 @@ h1 {
 }
 
 .toggle {
-  background-color: rgb(83, 49, 156);
+  background-color: rgb(227, 24, 54);
   height: 32px;
   width: 140px;
   border-radius: 20px;
@@ -100,7 +104,7 @@ h1 {
 
 .toggle span:last-of-type {
   background-color: white;
-  color: rgb(83, 49, 156);
+  color: rgb(227, 24, 54);
   padding: 4px 16px;
   border-radius: 20px;
 }
@@ -123,7 +127,7 @@ h1 {
 }
 
 .sessions-card .number {
-  color: rgb(83, 49, 156);
+  color: rgb(58, 0, 0);
   font-size: 56px;
   margin: 0;
 }
@@ -136,6 +140,7 @@ h1 {
 .slider {
   width: 100%;
   position: relative;
+  margin-bottom: 16px;
 }
 
 .slider .bar {
@@ -149,11 +154,18 @@ h1 {
 .slider .progress {
   width: 31%;
   height: 18px;
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(53, 10, 74, 1) 36%,
     rgba(83, 49, 156, 1) 100%
+  ); */
+
+  background: linear-gradient(
+    90deg,
+    rgb(36, 0, 0) 0%,
+    rgb(227, 24, 54) 36%,
+    rgb(253, 55, 85) 100%
   );
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -165,7 +177,7 @@ h1 {
 .slider .point {
   height: 24px;
   width: 24px;
-  background-color: rgb(83, 49, 156);
+  background-color: rgb(227, 24, 54);
   border-radius: 50%;
   position: absolute;
   top: -5px;
@@ -202,8 +214,14 @@ h1 {
   box-shadow: 0px 3px 11px 1px rgba(0, 0, 0, 0.1);
   text-align: center;
   font-weight: bold;
-  color: rgb(83, 49, 156);
+  color: rgb(227, 24, 54);
   text-transform: uppercase;
+  transition: 0.15s transform ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-8px);
 }
 
 .card .top-section p {
@@ -223,4 +241,44 @@ h1 {
   width: 30%;
   border: 1px solid rgb(210, 210, 210);
   border-radius: 2px;
+}
+
+.card button {
+  border: none;
+  color: white;
+  background-color: rgb(227, 24, 54);
+  /* background-color: rgb(83, 49, 156); */
+  padding: 16px;
+  border-radius: 10px;
+  transition: 0.15s transform ease;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.card button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.card .save-header {
+  color: white;
+  /* background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(53, 10, 74, 1) 36%,
+    rgba(83, 49, 156, 1) 100%
+  ); */
+
+  background: linear-gradient(
+    90deg,
+    rgb(36, 0, 0) 0%,
+    rgb(227, 24, 54) 36%,
+    rgb(253, 55, 85) 100%
+  );
+  position: absolute;
+  top: -34px;
+  left: 0;
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
